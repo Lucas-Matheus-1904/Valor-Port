@@ -1,0 +1,40 @@
+ /*
+    const value = [margem, idade, especie, numerodoBeneficio, analfabeto ];
+    console.log(value)
+    
+    if (value[1] <= 73) {
+        var margem1 = value[0] / 0.02408;
+        var n1 = Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 3 }).format(margem1)
+        var margemCarencia = value[0] / 0.02591;
+        var n2 = Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 3 }).format(margemCarencia)
+        
+        console.log("NB:", value[3], "Margem de:",value[0], "Que Libera aproximadamente " ,n1, " Em 84x pelo C6 sem Carência.",)
+        console.log("NB:", value[3],"Margem de:",value[0], "Que Libera aproximadamente ", n2, "Em 84x pelo C6 com carência de 120 dias.")
+        console.log("Obs: Existe diferenciação de comissão no Digital Normal para o Digital Plus, para mais detalhes entre em contato com o seu gestor comercial.")
+        
+
+    } else if (value[1] <= 74) {
+        var margem2 = value[0] / 0.02585;
+        var n3 = Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 3 }).format(margem2)
+        console.log("NB:", value[3], "Margem de:",value[0],  "Que libera aproximadamente " ,n3, " Em 72x pelo C6 sem Carência.")
+        console.log("Obs: Existe diferenciação de comissão no Digital Normal para o Digital Plus, para mais detalhes entre em contato com o seu gestor comercial.")
+        
+    } else if (value[1] <= 75) {
+        var margem3 = value[0] / 0.02843;
+        var n4 = Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 3 }).format(margem3)
+        console.log( "NB:", value[3], "Margem de:",value[0], "Que Libera aproximadamente " ,n4, " Em 60x pelo C6 sem Carência.")
+        console.log("Obs: Existe diferenciação de comissão no Digital Normal para o Digital Plus, para mais detalhes entre em contato com o seu gestor comercial.")
+        
+    } */
+
+
+
+
+
+var taxa1 = (value1[0] / 0.02355)-n1;
+var taxa2 = (value1[0] / 0.02322)-n1;
+var taxa3 = (value1[0] / 0.02284)-n1;
+var taxa4 = (value1[0] / 0.02210)-n1;
+var taxa5 = (value1[0] / 0.02143)-n1;
+var taxa6 = (value1[0] / 0.02045)-n1;
+var taxa7 = (value1[0] / 0.02045)-n1;

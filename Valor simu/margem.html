@@ -1,0 +1,106 @@
+<html lang="português">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margem</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="simulador.js" defer></script>
+</head>
+<body>
+
+<form>
+
+
+    <div class="campo1">
+    
+    <label for="tempoDoBeneficio">
+        <strong> Temp do Beneficio: </strong>
+        <input type="text" name="tempoDoBeneficio"  id ="tempoDoBeneficio" required>
+     </label> 
+
+
+    <label for="idade">
+        <strong> Idade: </strong>
+        <input type="text" name="idade"  id ="idade" required>
+     </label> 
+
+
+        <label for="especie">
+             <strong> Espécie: </strong>
+        <input type="text" name="especie"  id ="especie" required>
+     </label> 
+    </div>
+     <br>
+     <br>
+
+
+        <label>
+            <input type="checkbox" name="analfabeto" class="box" id="Analfabeto"> 
+            <strong> Analfabeto </strong>
+        </label>
+        
+        <br> 
+        <br>
+
+        <label>
+            <input type="checkbox" name="rogo" class="box" id="rogo"> 
+            <strong> Possui Rogo de primeiro grau </strong>
+        </label> 
+        <br> 
+        <br>
+        <label>
+            <input type="checkbox" name="Representante" class="box" id="Representante"> 
+            <strong> Possui Representante Legal </strong>
+        </label> 
+  
+    <br>
+    <br>
+    <div class="campo">       
+        <button class="botao" type="button" id="send"> <strong> Pesquisar </strong> </button>
+    </div>
+
+    <br>
+    <br>
+
+    <label for="margem">
+        <strong> Margem:  </strong>
+   <input type="text" name="margem"  id ="margem" required>
+     </label>
+
+</label>
+     <select id="bancos1" name="select" class="selectar">
+       <option id="selecionar" value="selacionar" selected> <strong> BANCOS </strong></option>
+       <option value="Banrisul" id="Banrisul"> <strong> Banrisul </strong>  </option>
+       <option value="Ole" id="Ole">Olé</option>
+       <option value="C6" id="C6">C6</option>
+       <option value="Pan" id="Pan">Pan</option>
+       <option value="Crefisa84" id="Crefisa84"> <strong>  Crefisa (84x) </strong>  </option>
+       <option value="Crefisa72" id="Crefisa72"> <strong>  Crefisa (72x) </strong>  </option>
+       <option value="Crefisa60" id="Crefisa60"> <strong>  Crefisa (60x) </strong>  </option>
+       <option value="Crefisa48" id="Crefisa48"> <strong>  Crefisa (48x) </strong>  </option>
+       <option value="Crefisa36" id="Crefisa36"> <strong>  Crefisa (36x) </strong>  </option>
+       <option value="Crefisa12" id="Crefisa12"> <strong>  Crefisa (12x) </strong>  </option>
+       <option value="Itau84" id="Itau84">Itaú (84x) </option>
+       <option value="Itau72" id="Itau72">Itaú (72x) </option>
+       <option value="Itau60" id="Itau60">Itaú (60x) </option>
+       <option value="Itau48" id="Itau48">Itaú (48x) </option>
+    </select>
+<br>
+<br>
+    <div class="campo">       
+        <button class="botao" type="button" id="send2"> <strong> Simular </strong> </button>
+    </div>
+
+    <div class="resultado" id="resultado">
+       
+    </div>
+</form>
+    <footer>       
+        <p class="p1">#Aqui você não tem preço, você tem VALOR!#</p>
+     
+    </footer>
+
+
+
+    

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="português">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portabilidade</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="sumulador.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+        <a href="index.html"> <img src="imagens/logo.jpg" width="300"> </a>
+        <main>
+            <div class="container"></div>
+            <form>
+
+                    <div class="campo" >
+                        <label for="numerodoBeneficio">
+                            <strong> Número do Benefício </strong>
+                            <input type="text" name="numerodoBeneficio"  id ="numerodoBeneficio" required>
+                        </label> 
+                    </div>        
+
+                    <div class="campo">
+                        <label for="Idade">
+                            <strong> idade </strong>
+                            <input type="text" name="idade"  id ="idade" required>
+                        </label>
+                    </div>
+
+                    <div class="campo">
+                        <label for="especie">
+                            <strong> Espécie </strong>
+                            <input type="text" name="especie" id ="especie"  required>
+                        </label>
+                    </div>
+                    
+                    <div class="campo compo-inline">
+                        <label for="analfabeto">
+                            <input type="checkbox" value="sim" name="analfabeto" id="analfabeto"> 
+                            <strong> Analfabeto? </strong>
+                        </label>
+                    </div>
+
+                    <div class="campo compo-inline">
+                        <label for="rogo">
+                            <input type="checkbox" name="rogo" id="rogo">
+                            <strong> Cliente possui rogo de 1º grau? </strong>
+                        </label>
+                    </div>
+
+                    <div class="campo">       
+                      <a href="port.html">  <button type="button" class="botao" data-toggle="modal" data-target="#exampleModalCenter">
+                            Prosseguir
+                          </button>
+                      </a>  
+                    </div>
+            
+            </form>
+        </div>
+        </main>
+        <footer>       
+            <p class="p1">#Aqui você não tem preço, você tem VALOR!#</p>
+            <p class="p1" >operacional@valorpromotora.com.br</p> 
+     </footer>
+  </body>
+</html>

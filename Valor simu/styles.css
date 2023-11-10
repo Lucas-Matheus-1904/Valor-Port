@@ -1,0 +1,270 @@
+
+footer{
+    position: absolute;
+    bottom: 0px;
+    width: 90%;
+    left: 6%;
+    text-align: center;
+    
+    
+}
+
+body{
+    background-color:rgba(255, 255, 255); 
+    width: 100%;;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+main{
+    margin-left: 43%;
+    margin-top: -15%;
+}
+
+ul{
+    position: relative;
+    background-color: rgb(0, 153, 154);
+    margin-top: 50px;
+    margin: 0px;  
+}
+
+ul li{
+    display: inline-block;
+}
+
+
+ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    padding: 15px;
+    display: block;
+}
+
+ul li:hover{
+   background-color:  rgb(0, 130, 140); 
+}
+
+ul ul {
+    position: absolute;
+    min-width: 50px;
+    display: none;
+    background-color: rgb(0, 130, 140);     
+}
+
+ul ul li {
+    display: block;
+    background-color: rgb(0, 130, 140); 
+    min-width: 200px
+}
+
+ul li:hover ul{
+    display: inline;
+}
+.grupo{
+    display: bl;
+
+}
+.grupo{
+    display: block;
+}
+
+
+fieldset{
+    border: 0;
+    font-family: sans-serif;
+    font-size: 1em;
+    color:rgb(3, 61, 61) ;
+    margin-left: 50%;
+    margin-top: 50%;
+    justify-content: center;
+    position: absolute;
+}
+
+
+input {
+    border-radius: 3px;
+    max-width: 80px;
+    box-shadow: 1px 1px 1px black;
+    margin: 1.5px;
+    
+}
+
+.campo {
+    margin-bottom: 1em;
+    display: inline;
+}
+
+.campo1 {
+    margin-bottom: 1em;
+    display: inline;
+}
+.campo input[type="text1"]  {
+    padding: 0.1em;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    display: block;
+}
+
+.campo label {
+    margin-bottom: 1em;
+    color: rgb(3, 61, 61);
+    display: flex;
+    flex-direction: column;
+}
+
+label strong {
+    margin-bottom: 5px;
+}
+
+.compo-inline label {
+    display: inline;
+    flex-direction: row;
+}
+
+.campo input[type="text"]  {
+    padding: 0.1em;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    display: inline;
+    width: 5px;
+}
+
+.botao {
+    font-size: 1em;
+    background-color:rgb(3, 61, 61);
+    border: 0;
+    margin-bottom: 1em;
+    color:white;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px black;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5 ) ;
+    cursor: pointer;
+    display: block;
+}
+
+
+.botao:hover {
+    background: rgb(2, 59, 59);
+    box-shadow: inset 2px 2px 2px black;
+    text-shadow: none;
+    border: solid;
+
+
+}
+
+.modaltitle1{
+    position: absolute;
+    bottom: 120px;
+    width: 90%;
+    left: 6%;
+    text-align: center;
+}
+
+.center1 {
+    position: absolute;
+    bottom: 0px;
+    width: 30%;
+    top: 25%;
+    left: 36%;
+    text-align: center;
+
+}
+
+
+.p1 {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: inherit;
+    color: rgb(3, 61, 61);
+}
+
+
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+
+    
+}
+
+
+.box {
+    
+        margin:0 12px 0 0;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+      
+}
+
+.selectar{
+    box-shadow: 2px 2px 2px black;
+}
+
+
+
+arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(90deg);
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.arrow span{
+    display: block;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-bottom: 10px solid rgb(2, 59, 59);
+    border-right: 10px solid rgb(2, 59, 59);
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+
+
+.arrow span:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+
+.arrow span:nth-child(3) {
+    animation-delay: -0.6s;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+
+    }
+} 
+
+
+.girar {
+    transform: rotate(270deg);
+}
+
+
+
+.resultado{
+    background-color: rgb(2, 59, 59);
+    font-size: 20px;
+    color: aliceblue;
+}

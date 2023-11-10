@@ -1,0 +1,3 @@
+     
+        <a href="simulador.html"> <button class="btn1"> Portabilidade   </button></a>
+        <a href="margem.html"> <button class="btn2" >  Margem  </button>  </a>

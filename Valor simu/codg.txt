@@ -1,0 +1,1436 @@
+btn.addEventListener('click', function (e) {
+  e.preventDefault()
+  const parcela1 = document.querySelector('#parcela1')
+  const prazoRestante1 = document.querySelector('#prazoRestante1')
+  const taxa1 = document.querySelector('#taxa1')
+  const bancos1 = document.querySelector('#bancos1')
+  const value1 = [
+    parcela1.value,
+    prazoRestante1.value,
+    taxa1.value,
+    bancos1.value
+  ]
+  var prazoNegativo = value1[1] * -1
+  var taxaPorcento = value1[2] / 100
+  var saldodDvedor1 =
+    (value1[0] * (1 - (1 + taxaPorcento) ** prazoNegativo)) / taxaPorcento
+  var saldoFormatado1 = Intl.NumberFormat('pt-BR', {
+    maximumSignificantDigits: 6
+  }).format(saldodDvedor1)
+
+  if (value1[3] == 'Bradesco') {
+    var bradescoValor1Par1 = value1[0] / 0.02402 - saldodDvedor1 /* 2;14*/
+    var bradescoValor1Par2 = value1[0] / 0.0238 - saldodDvedor1 /* 1;80*/
+    var bradescoValor1Par3 = value1[0] / 0.02304 - saldodDvedor1 /* 1;70*/
+    var bradescoValor1Par4 = value1[0] / 0.02229 - saldodDvedor1 /* 1;60*/
+    var bradescoValor1Par5 = value1[0] / 0.02193 - saldodDvedor1 /* 1;55*/
+    var bradescoValor1Par6 = value1[0] / 0.02134 - saldodDvedor1 /* 1;47*/
+
+    var parcelaFormatada1Bradesco1 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor1Par1)
+
+    var parcelaFormatada2Bradesco1 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor1Par2)
+
+    var parcelaFormatada3Bradesco1 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor1Par3)
+
+    var parcelaFormatada4Bradesco1 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor1Par4)
+
+    var parcelaFormatada5Bradesco1 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor1Par5)
+
+    var parcelaFormatada6Bradesco1 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor1Par6)
+
+    if (bradescoValor1Par1 >= 250 && saldodDvedor1 > 16000) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 2,14%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada2Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,80%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada3Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,70%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada4Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,60%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada5Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,55%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada6Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,47%'
+      )
+    } else if (bradescoValor1Par2 >= 250) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada2Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,80%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada3Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,70%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada4Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,60%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada5Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,55%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada6Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,47%'
+      )
+    } else if (bradescoValor1Par3 >= 250 && saldodDvedor1 >= 5000) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada2Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,70%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada4Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,60%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada5Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,55%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada6Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,47%'
+      )
+    } else if (bradescoValor1Par4 >= 250 && saldodDvedor1 >= 4000) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada2Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,60%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada5Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,55%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada6Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,47%'
+      )
+    } else if (bradescoValor1Par5 >= 250) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada2Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,55%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada6Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,47%'
+      )
+    } else if (bradescoValor1Par6 >= 250) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada2Bradesco1 +
+          ' Em 84x.' +
+          ' Tabela 1,47%'
+      )
+    }
+  } else if (value1[3] == 'Daycoval') {
+    var daycovalValor1Par1 = value1[0] / 0.02682 - saldodDvedor1 /* 2,14% */
+    var daycovalValor1Par2 = value1[0] / 0.026 - saldodDvedor1 /* 2,02% */
+    var daycovalValor1Par3 = value1[0] / 0.02519 - saldodDvedor1 /* 1,92% */
+    var daycovalValor1Par4 = value1[0] / 0.0244 - saldodDvedor1 /* 1,82% */
+    var daycovalValor1Par5 = value1[0] / 0.02369 - saldodDvedor1 /* 1,73% */
+
+    var parcelaFormatada1Daycoval1 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(daycovalValor1Par1)
+    var parcelaFormatada1Daycoval2 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(daycovalValor1Par2)
+    var parcelaFormatada1Daycoval3 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(daycovalValor1Par3)
+    var parcelaFormatada1Daycoval4 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(daycovalValor1Par4)
+    var parcelaFormatada1Daycoval5 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(daycovalValor1Par5)
+
+    if (daycovalValor1Par1 >= 150) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval1 +
+          ' Em 84x.' +
+          ' Tabela 2,14%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval2 +
+          ' Em 84x.' +
+          ' Tabela 2,02%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval3 +
+          ' Em 84x.' +
+          ' Tabela 1,92%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval4 +
+          ' Em 84x.' +
+          ' Tabela 1,82%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval5 +
+          ' Em 84x.' +
+          ' Tabela 1,73%'
+      )
+    } else if (daycovalValor1Par2 >= 150) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval2 +
+          ' Em 84x.' +
+          ' Tabela 2,02%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval3 +
+          ' Em 84x.' +
+          ' Tabela 1,92%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval4 +
+          ' Em 84x.' +
+          ' Tabela 1,82%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval5 +
+          ' Em 84x.' +
+          ' Tabela 1,73%'
+      )
+    } else if (daycovalValor1Par3 >= 100) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval3 +
+          ' Em 84x.' +
+          ' Tabela 1,92%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval4 +
+          ' Em 84x.' +
+          ' Tabela 1,82%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval5 +
+          ' Em 84x.' +
+          ' Tabela 1,73%'
+      )
+    } else if (daycovalValor1Par4 >= 100) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval4 +
+          ' Em 84x.' +
+          ' Tabela 1,82%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval5 +
+          ' Em 84x.' +
+          ' Tabela 1,73%'
+      )
+    } else if (daycovalValor1Par4 >= 100) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval5 +
+          ' Em 84x.' +
+          ' Tabela 1,73%'
+      )
+    }
+  } else if (value1[3] == 'Banrisul') {
+    var factaValor1Par1 = value1[0] / 0.023741 - saldodDvedor1 /* 1,79 */
+    var factaValor1Par2 = value1[0] / 0.023641 - saldodDvedor1 /* 1,75*/
+    var factaValor1Par3 = value1[0] / 0.023499 - saldodDvedor1 /* 1,70*/
+    var factaValor1Par4 = value1[0] / 0.023399 - saldodDvedor1 /* 1,65*/
+    var factaValor1Par5 = value1[0] / 0.023299 - saldodDvedor1 /* 1,60*/
+    var factaValor1Par6 = value1[0] / 0.02306 - saldodDvedor1 /* 1,50*/
+    var factaValor1Par7 = value1[0] / 0.022151 - saldodDvedor1 /* 1,45*/
+    var parcelaFormatada1Facta1 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor1Par1)
+    var parcelaFormatada1Facta2 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor1Par2)
+    var parcelaFormatada1Facta3 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor1Par3)
+    var parcelaFormatada1Facta4 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor1Par4)
+    var parcelaFormatada1Facta5 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor1Par5)
+    var parcelaFormatada1Facta6 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor1Par6)
+    var parcelaFormatada1Facta7 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor1Par7)
+
+    console.log(
+      'Portabilidade: Facta ' +
+        ' Parcela de: ' +
+        value1[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada1Facta2 +
+        ' Em 84x.' +
+        ' Tabela 1,75'
+    )
+    console.log(
+      'Portabilidade: Facta ' +
+        ' Parcela de: ' +
+        value1[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada1Facta4 +
+        ' Em 84x.' +
+        ' Tabela 1,65'
+    )
+    console.log(
+      'Portabilidade: Facta ' +
+        ' Parcela de: ' +
+        value1[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada1Facta7 +
+        ' Em 84x.' +
+        ' Tabela 1,45'
+    )
+  }
+  const parcela2 = document.querySelector('#parcela2')
+  const prazoRestante2 = document.querySelector('#prazoRestante2')
+  const taxa2 = document.querySelector('#taxa2')
+  const bancos2 = document.querySelector('#bancos2')
+  const value2 = [
+    parcela2.value,
+    prazoRestante2.value,
+    taxa2.value,
+    bancos2.value
+  ]
+  var prazoNegativo = value2[1] * -1
+  var taxaPorcento = value2[2] / 100
+  var saldodDvedor2 =
+    (value2[0] * (1 - (1 + taxaPorcento) ** prazoNegativo)) / taxaPorcento
+  var saldoFormatado2 = Intl.NumberFormat('pt-BR', {
+    maximumSignificantDigits: 5
+  }).format(saldodDvedor2)
+  if (value1[3] == 'Bradesco') {
+    var bradescoValor2Par1 = value2[0] / 0.02402 - saldodDvedor2 /* 2;14*/
+    var bradescoValor2Par2 = value2[0] / 0.0238 - saldodDvedor2 /*1;80*/
+    var bradescoValor2Par3 = value2[0] / 0.02304 - saldodDvedor2 /* 1;70*/
+    var bradescoValor2Par4 = value2[0] / 0.02229 - saldodDvedor2 /* 1;60*/
+    var bradescoValor2Par5 = value2[0] / 0.02193 - saldodDvedor2 /* 1;55*/
+    var bradescoValor2Par6 = value2[0] / 0.02134 - saldodDvedor2 /* 1;47*/
+
+    var parcelaFormatada1Bradesco2 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor2Par1)
+
+    var parcelaFormatada2Bradesco2 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor2Par2)
+
+    var parcelaFormatada3Bradesco2 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor2Par3)
+
+    var parcelaFormatada4Bradesco2 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor2Par4)
+
+    var parcelaFormatada5Bradesco2 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor2Par5)
+
+    var parcelaFormatada6Bradesco2 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor2Par6)
+
+    if (bradescoValor1Par1 >= 250 && saldodDvedor1 > 16000) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 2,14%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada2Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,80%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada3Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,70%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada4Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,60%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada5Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,55%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada6Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,47%'
+      )
+    } else if (bradescoValor2Par2 >= 250 && saldodDvedor2 > 8000) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada2Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,80%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada3Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,70%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada4Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,60%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada5Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,55%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada6Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,47%'
+      )
+    } else if (bradescoValor2Par3 >= 250 && saldodDvedor2 >= 5000) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada2Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,70%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada4Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,60%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada5Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,55%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada6Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,47%'
+      )
+    } else if (bradescoValor2Par4 >= 250 && saldodDvedor2 >= 4000) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada4Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,60%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada5Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,55%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada6Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,47%'
+      )
+    } else if (bradescoValor2Par5 >= 250) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada2Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,55%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada6Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,47%'
+      )
+    } else if (bradescoValor2Par6 >= 250) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada6Bradesco2 +
+          ' Em 84x.' +
+          ' Tabela 1,47%'
+      )
+    }
+  } else if (value1[3] == 'Daycoval') {
+    var daycovalValor1Par1 = value1[0] / 0.02682 - saldodDvedor1 /* 2,14% */
+    var daycovalValor1Par2 = value1[0] / 0.026 - saldodDvedor1 /* 2,02% */
+    var daycovalValor1Par3 = value1[0] / 0.02519 - saldodDvedor1 /* 1,92% */
+    var daycovalValor1Par4 = value1[0] / 0.0244 - saldodDvedor1 /* 1,82% */
+    var daycovalValor1Par5 = value1[0] / 0.02369 - saldodDvedor1 /* 1,73% */
+
+    var parcelaFormatada1Daycoval1 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(daycovalValor1Par1)
+    var parcelaFormatada1Daycoval2 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(daycovalValor1Par2)
+    var parcelaFormatada1Daycoval3 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(daycovalValor1Par3)
+    var parcelaFormatada1Daycoval4 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(daycovalValor1Par4)
+    var parcelaFormatada1Daycoval5 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(daycovalValor1Par5)
+
+    if (daycovalValor1Par1 >= 150) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval1 +
+          ' Em 84x.' +
+          ' Tabela 2,14%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval2 +
+          ' Em 84x.' +
+          ' Tabela 2,02%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval3 +
+          ' Em 84x.' +
+          ' Tabela 1,92%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval4 +
+          ' Em 84x.' +
+          ' Tabela 1,82%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval5 +
+          ' Em 84x.' +
+          ' Tabela 1,73%'
+      )
+    } else if (daycovalValor1Par2 >= 150) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval2 +
+          ' Em 84x.' +
+          ' Tabela 2,02%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval3 +
+          ' Em 84x.' +
+          ' Tabela 1,92%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval4 +
+          ' Em 84x.' +
+          ' Tabela 1,82%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval5 +
+          ' Em 84x.' +
+          ' Tabela 1,73%'
+      )
+    } else if (daycovalValor1Par3 >= 100) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval3 +
+          ' Em 84x.' +
+          ' Tabela 1,92%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval4 +
+          ' Em 84x.' +
+          ' Tabela 1,82%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval5 +
+          ' Em 84x.' +
+          ' Tabela 1,73%'
+      )
+    } else if (daycovalValor1Par4 >= 100) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval4 +
+          ' Em 84x.' +
+          ' Tabela 1,82%'
+      )
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval5 +
+          ' Em 84x.' +
+          ' Tabela 1,73%'
+      )
+    } else if (daycovalValor1Par4 >= 100) {
+      console.log(
+        'Portabilidade ' +
+          value1[3] +
+          ' Parcela de: ' +
+          value1[0] +
+          ' Que libera aproximadamente ' +
+          parcelaFormatada1Daycoval5 +
+          ' Em 84x.' +
+          ' Tabela 1,73%'
+      )
+    }
+  }
+
+  const parcela3 = document.querySelector('#parcela3')
+  const prazoRestante3 = document.querySelector('#prazoRestante3')
+  const taxa3 = document.querySelector('#taxa3')
+  const bancos3 = document.querySelector('#bancos3')
+  const value3 = [
+    parcela3.value,
+    prazoRestante3.value,
+    taxa3.value,
+    bancos3.value
+  ]
+  var prazoNegativo = value3[1] * -1
+  var taxaPorcento = value3[2] / 100
+  var saldodDvedor3 =
+    (value3[0] * (1 - (1 + taxaPorcento) ** prazoNegativo)) / taxaPorcento
+  var saldoFormatado3 = Intl.NumberFormat('pt-BR', {
+    maximumSignificantDigits: 5
+  }).format(saldodDvedor3)
+
+  if (value3[3] == 'Bradesco3') {
+    var bradescoValor3Par1 = value3[0] / 0.02355 - saldodDvedor3 /* 1;80*/
+    var bradescoValor3Par2 = value3[0] / 0.02322 - saldodDvedor3 /* 1;75*/
+    var bradescoValor3Par3 = value3[0] / 0.02284 - saldodDvedor3 /* 1;70*/
+    var bradescoValor3Par4 = value3[0] / 0.0221 - saldodDvedor3 /* 1;60*/
+    var bradescoValor3Par5 = value3[0] / 0.02143 - saldodDvedor3 /* 1;55*/
+    var parcelaFormatada1Bradesco3 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor3Par1)
+    var parcelaFormatada2Bradesco3 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor3Par2)
+    var parcelaFormatada3Bradesco3 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor3Par3)
+    var parcelaFormatada4Bradesco3 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor3Par4)
+    var parcelaFormatada5Bradesco3 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor3Par5)
+
+    console.log(
+      'Portabilidade: Bradesco ' +
+        ' Parcela de: ' +
+        value3[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada3Bradesco3 +
+        ' Em 84x.' +
+        ' Tabela 1,70'
+    )
+    console.log(
+      'Portabilidade: Bradesco ' +
+        ' Parcela de: ' +
+        value3[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada4Bradesco3 +
+        ' Em 84x.' +
+        ' Tabela 1,60'
+    )
+    console.log(
+      'Portabilidade: Bradesco ' +
+        ' Parcela de: ' +
+        value3[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada5Bradesco3 +
+        ' Em 84x.' +
+        ' Tabela 1,55'
+    )
+  } else if (value3[3] == 'Itaú3') {
+    var itauValor3Par1 = value3[0] / 0.0233 - saldodDvedor3 /* 1,80 a 1,70 */
+    var itauValor3Par2 = value3[0] / 0.02258 - saldodDvedor3 /* 1,69 a 1,60*/
+    var itauValor3Par3 = value3[0] / 0.02185 - saldodDvedor3 /* 1,59 a 1,50*/
+    var itauValor3Par4 = value3[0] / 0.02119 - saldodDvedor3 /* 1,49 a 1,42*/
+    var itauValor3Par5 = value3[0] / 0.02065 - saldodDvedor3 /* 1,41 a 1,35*/
+    var parcelaFormatada3Itau1 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(itauValor3Par1)
+    var parcelaFormatada3Itau2 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(itauValor3Par2)
+    var parcelaFormatada3Itau3 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(itauValor3Par3)
+    var parcelaFormatada3Itau4 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(itauValor3Par4)
+    var parcelaFormatada3Itau5 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(itauValor3Par5)
+
+    console.log(
+      'Portabilidade: Itaú ' +
+        ' Parcela de: ' +
+        value3[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada3Itau2 +
+        ' Em 84x.' +
+        ' Tabela 1,69 a 1,60'
+    )
+    console.log(
+      'Portabilidade: Itaú ' +
+        ' Parcela de: ' +
+        value3[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada3Itau3 +
+        ' Em 84x.' +
+        ' Tabela 1,59 a 1,50'
+    )
+    console.log(
+      'Portabilidade: Itaú ' +
+        ' Parcela de: ' +
+        value3[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada3Itau4 +
+        ' Em 84x.' +
+        ' Tabela 1,49 a 1,42'
+    )
+  } else if (value3[3] == 'Olé3') {
+    var oleValor3Par1 = value3[0] / 0.024041 - saldodDvedor3 /* 1,79 */
+    var oleValor3Par2 = value3[0] / 0.023753 - saldodDvedor3 /* 1,75*/
+    var oleValor3Par3 = value3[0] / 0.023393 - saldodDvedor3 /* 1,70*/
+    var oleValor3Par4 = value3[0] / 0.023033 - saldodDvedor3 /* 1,65*/
+    var oleValor3Par5 = value3[0] / 0.022801 - saldodDvedor3 /* 1,60*/
+    var oleValor3Par6 = value3[0] / 0.022701 - saldodDvedor3 /* 1,50*/
+    var oleValor3Par7 = value3[0] / 0.022601 - saldodDvedor3 /* 1,45*/
+    var parcelaFormatada3Ole1 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(oleValor3Par1)
+    var parcelaFormatada3Ole2 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(oleValor3Par2)
+    var parcelaFormatada3Ole3 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(oleValor3Par3)
+    var parcelaFormatada3Ole4 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(oleValor3Par4)
+    var parcelaFormatada3Ole5 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(oleValor3Par5)
+    var parcelaFormatada3Ole6 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(oleValor3Par6)
+    var parcelaFormatada3Ole7 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(oleValor3Par7)
+
+    console.log(
+      'Portabilidade: Olé ' +
+        ' Parcela de: ' +
+        value3[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada3Ole3 +
+        ' Em 84x.' +
+        ' Tabela 1,75'
+    )
+    console.log(
+      'Portabilidade: Olé ' +
+        ' Parcela de: ' +
+        value3[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada3Ole4 +
+        ' Em 84x.' +
+        ' Tabela 1,70'
+    )
+    console.log(
+      'Portabilidade: Olé ' +
+        ' Parcela de: ' +
+        value3[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada3Ole5 +
+        ' Em 84x.' +
+        ' Tabela 1,60'
+    )
+    console.log(
+      'Portabilidade: Olé ' +
+        ' Parcela de: ' +
+        value3[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada3Ole6 +
+        ' Em 84x.' +
+        ' Tabela 1,50'
+    )
+  } else if (value3[3] == 'Facta3') {
+    var factaValor3Par1 = value3[0] / 0.023741 - saldodDvedor3 /* 1,79 */
+    var factaValor3Par2 = value3[0] / 0.023641 - saldodDvedor3 /* 1,75*/
+    var factaValor3Par3 = value3[0] / 0.023499 - saldodDvedor3 /* 1,70*/
+    var factaValor3Par4 = value3[0] / 0.023399 - saldodDvedor3 /* 1,65*/
+    var factaValor3Par5 = value3[0] / 0.023222 - saldodDvedor3 /* 1,60*/
+    var factaValor3Par6 = value3[0] / 0.02306 - saldodDvedor3 /* 1,50*/
+    var factaValor3Par7 = value3[0] / 0.022151 - saldodDvedor3 /* 1,45*/
+    var parcelaFormatada3Facta1 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor3Par1)
+    var parcelaFormatada3Facta2 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor3Par2)
+    var parcelaFormatada3Facta3 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor3Par3)
+    var parcelaFormatada3Facta4 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor3Par4)
+    var parcelaFormatada3Facta5 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor3Par5)
+    var parcelaFormatada3Facta6 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor3Par6)
+    var parcelaFormatada3Facta7 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor3Par7)
+
+    console.log(
+      'Portabilidade: Facta ' +
+        ' Parcela de: ' +
+        value3[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada3Facta2 +
+        ' Em 84x.' +
+        ' Tabela 1,75'
+    )
+    console.log(
+      'Portabilidade: Facta ' +
+        ' Parcela de: ' +
+        value3[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada3Facta4 +
+        ' Em 84x.' +
+        ' Tabela 1,65'
+    )
+    console.log(
+      'Portabilidade: Facta ' +
+        ' Parcela de: ' +
+        value3[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada3Facta7 +
+        ' Em 84x.' +
+        ' Tabela 1,45'
+    )
+  }
+  const parcela4 = document.querySelector('#parcela4')
+  const prazoRestante4 = document.querySelector('#prazoRestante4')
+  const taxa4 = document.querySelector('#taxa4')
+  const bancos4 = document.querySelector('#bancos4')
+  const value4 = [
+    parcela4.value,
+    prazoRestante4.value,
+    taxa4.value,
+    bancos4.value
+  ]
+  var prazoNegativo = value4[1] * -1
+  var taxaPorcento = value4[2] / 100
+  var saldodDvedor4 =
+    (value4[0] * (1 - (1 + taxaPorcento) ** prazoNegativo)) / taxaPorcento
+  var saldoFormatado4 = Intl.NumberFormat('pt-BR', {
+    maximumSignificantDigits: 5
+  }).format(saldodDvedor4)
+
+  if (value4[3] == 'Bradesco4') {
+    var bradescoValor4Par1 = value4[0] / 0.02355 - saldodDvedor4 /* 1;80*/
+    var bradescoValor4Par2 = value4[0] / 0.02322 - saldodDvedor4 /* 1;75*/
+    var bradescoValor4Par3 = value4[0] / 0.02284 - saldodDvedor4 /* 1;70*/
+    var bradescoValor4Par4 = value4[0] / 0.0221 - saldodDvedor4 /* 1;60*/
+    var bradescoValor4Par5 = value4[0] / 0.02143 - saldodDvedor4 /* 1;55*/
+    var parcelaFormatada1Bradesco4 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor4Par1)
+    var parcelaFormatada2Bradesco4 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor4Par2)
+    var parcelaFormatada3Bradesco4 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor4Par3)
+    var parcelaFormatada4Bradesco4 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor4Par4)
+    var parcelaFormatada5Bradesco4 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(bradescoValor4Par5)
+
+    console.log(
+      'Portabilidade: Bradesco ' +
+        ' Parcela de: ' +
+        value4[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada3Bradesco4 +
+        ' Em 84x.' +
+        ' Tabela 1,70'
+    )
+    console.log(
+      'Portabilidade: Bradesco ' +
+        ' Parcela de: ' +
+        value4[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada4Bradesco4 +
+        ' Em 84x.' +
+        ' Tabela 1,60'
+    )
+    console.log(
+      'Portabilidade: Bradesco ' +
+        ' Parcela de: ' +
+        value4[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada5Bradesco4 +
+        ' Em 84x.' +
+        ' Tabela 1,55'
+    )
+  } else if (value4[3] == 'Itaú4') {
+    var itauValor4Par1 = value4[0] / 0.0233 - saldodDvedor4 /* 1,80 a 1,70 */
+    var itauValor4Par2 = value4[0] / 0.02258 - saldodDvedor4 /* 1,69 a 1,60*/
+    var itauValor4Par3 = value4[0] / 0.02185 - saldodDvedor4 /* 1,59 a 1,50*/
+    var itauValor4Par4 = value4[0] / 0.02119 - saldodDvedor4 /* 1,49 a 1,42*/
+    var itauValor4Par5 = value4[0] / 0.02065 - saldodDvedor4 /* 1,41 a 1,35*/
+    var parcelaFormatada3Itau1 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(itauValor3Par1)
+    var parcelaFormatada3Itau2 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(itauValor3Par2)
+    var parcelaFormatada3Itau3 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(itauValor3Par3)
+    var parcelaFormatada3Itau4 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(itauValor3Par4)
+    var parcelaFormatada3Itau5 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(itauValor3Par5)
+
+    console.log(
+      'Portabilidade: Itaú ' +
+        ' Parcela de: ' +
+        value4[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada4Itau2 +
+        ' Em 84x.' +
+        ' Tabela 1,69 a 1,60'
+    )
+    console.log(
+      'Portabilidade: Itaú ' +
+        ' Parcela de: ' +
+        value4[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada4Itau3 +
+        ' Em 84x.' +
+        ' Tabela 1,59 a 1,50'
+    )
+    console.log(
+      'Portabilidade: Itaú ' +
+        ' Parcela de: ' +
+        value4[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada4Itau4 +
+        ' Em 84x.' +
+        ' Tabela 1,49 a 1,42'
+    )
+  } else if (value4[3] == 'Olé4') {
+    var oleValor4Par1 = value4[0] / 0.024041 - saldodDvedor4 /* 1,79 */
+    var oleValor4Par2 = value4[0] / 0.023753 - saldodDvedor4 /* 1,75*/
+    var oleValor4Par3 = value4[0] / 0.023393 - saldodDvedor4 /* 1,70*/
+    var oleValor4Par4 = value4[0] / 0.023033 - saldodDvedor4 /* 1,65*/
+    var oleValor4Par5 = value4[0] / 0.022801 - saldodDvedor4 /* 1,60*/
+    var oleValor4Par6 = value4[0] / 0.022701 - saldodDvedor4 /* 1,50*/
+    var oleValor4Par7 = value4[0] / 0.022601 - saldodDvedor4 /* 1,45*/
+    var parcelaFormatada4Ole1 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(oleValor4Par1)
+    var parcelaFormatada4Ole2 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(oleValor4Par2)
+    var parcelaFormatada4Ole3 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(oleValor4Par3)
+    var parcelaFormatada4Ole4 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(oleValor4Par4)
+    var parcelaFormatada4Ole5 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(oleValor4Par5)
+    var parcelaFormatada4Ole6 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(oleValor4Par6)
+    var parcelaFormatada4Ole7 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(oleValor4Par7)
+
+    console.log(
+      'Portabilidade: Olé ' +
+        ' Parcela de: ' +
+        value4[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada4Ole3 +
+        ' Em 84x.' +
+        ' Tabela 1,75'
+    )
+    console.log(
+      'Portabilidade: Olé ' +
+        ' Parcela de: ' +
+        value4[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada4Ole4 +
+        ' Em 84x.' +
+        ' Tabela 1,70'
+    )
+    console.log(
+      'Portabilidade: Olé ' +
+        ' Parcela de: ' +
+        value4[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada4Ole5 +
+        ' Em 84x.' +
+        ' Tabela 1,60'
+    )
+    console.log(
+      'Portabilidade: Olé ' +
+        ' Parcela de: ' +
+        value4[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada4Ole6 +
+        ' Em 84x.' +
+        ' Tabela 1,50'
+    )
+  } else if (value4[3] == 'Facta4') {
+    var factaValor4Par1 = value4[0] / 0.023741 - saldodDvedor4 /* 1,79 */
+    var factaValor4Par2 = value4[0] / 0.023641 - saldodDvedor4 /* 1,75*/
+    var factaValor4Par3 = value4[0] / 0.023499 - saldodDvedor4 /* 1,70*/
+    var factaValor4Par4 = value4[0] / 0.023399 - saldodDvedor4 /* 1,65*/
+    var factaValor4Par5 = value4[0] / 0.023222 - saldodDvedor4 /* 1,60*/
+    var factaValor4Par6 = value4[0] / 0.02306 - saldodDvedor4 /* 1,50*/
+    var factaValor4Par7 = value4[0] / 0.022151 - saldodDvedor4 /* 1,45*/
+    var parcelaFormatada4Facta1 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor4Par1)
+    var parcelaFormatada4Facta2 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor4Par2)
+    var parcelaFormatada4Facta3 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor4Par3)
+    var parcelaFormatada4Facta4 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor4Par4)
+    var parcelaFormatada4Facta5 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor4Par5)
+    var parcelaFormatada4Facta6 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor4Par6)
+    var parcelaFormatada4Facta7 = Intl.NumberFormat('pt-BR', {
+      maximumSignificantDigits: 6
+    }).format(factaValor4Par7)
+
+    console.log(
+      'Portabilidade: Facta ' +
+        ' Parcela de: ' +
+        value4[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada4Facta2 +
+        ' Em 84x.' +
+        ' Tabela 1,75'
+    )
+    console.log(
+      'Portabilidade: Facta ' +
+        ' Parcela de: ' +
+        value4[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada4Facta4 +
+        ' Em 84x.' +
+        ' Tabela 1,65'
+    )
+    console.log(
+      'Portabilidade: Facta ' +
+        ' Parcela de: ' +
+        value4[0] +
+        ' Que libera aproximadamente ' +
+        parcelaFormatada4Facta7 +
+        ' Em 84x.' +
+        ' Tabela 1,45'
+    )
+
+    r
+  }
+})

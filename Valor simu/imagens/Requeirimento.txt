@@ -1,0 +1,27 @@
+const btn = document.querySelector ("#send");
+
+btn.addEventListener("click", function(e) {
+
+    e.preventDefault();
+
+const Prestacao = document.querySelector ("#Prestacao");
+const PrazoRestante = document.querySelector ("#PrazoRestante");
+const PrazoTotal = document.querySelector ("#PrazoTotal");
+const Idade = document.querySelector ("#Idade");
+
+const value = [Prestacao.value, PrazoRestante.value, PrazoTotal.value,Idade.value ];
+
+var saldo = value[0] / 0.02421
+var jurosmensal = 0.018;
+var NumeroMeses = value[1] * -1
+var resultado = 1 - (1 + jurosmensal)** NumeroMeses
+var Q1 = value[0] / jurosmensal
+var Q2 = Q1 * resultado
+
+
+
+console.log('Saldo devedor: ', Q2)
+
+
+}
+)
